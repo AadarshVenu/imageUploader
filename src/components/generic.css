@@ -1,0 +1,123 @@
+.background-image-div {
+	background-image: url("../assets/backgroundImage.jpg");
+	height: 210px;
+	background-size: cover;
+}
+
+.content-div {
+	height: 210px;
+	position: relative;
+}
+
+.defaultImage {
+	width: 160px;
+	height: 160px;
+	gap: 0px;
+	border-radius: 50%;
+	border: 6px 0px 0px 0px;
+	opacity: 0px;
+	position: absolute;
+	top: -90px;
+}
+
+.content-div-flex {
+	display: flex;
+	justify-content: space-between;
+	height: 40%;
+}
+
+.name-div {
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 36px;
+	text-align: left;
+}
+
+.details-div {
+	margin-top: 15px;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 28px;
+	text-align: left;
+}
+
+.webflow-logo {
+	display: inline;
+	margin: 0 10px;
+}
+
+.dot {
+	margin: 0 10px;
+	color: gray;
+	font-size: 25px;
+}
+
+.content-div {
+	min-height: auto; 
+}
+
+@media (max-width: 768px) {
+	.defaultImage {
+			width: 120px;
+			height: 120px;
+			top: -60px;
+	}
+
+	.name-div {
+			font-size: 24px;
+			line-height: 30px;
+	}
+
+	.details-div {
+			font-size: 13px;
+			line-height: 22px;
+	}
+
+	.dot {
+			font-size: 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.defaultImage {
+			width: 100px;
+			height: 100px;
+			top: -50px;
+	}
+
+	.name-div {
+			font-size: 20px;
+			line-height: 26px;
+	}
+
+	.details-div {
+			font-size: 12px;
+			line-height: 20px;
+	}
+
+	.dot {
+			font-size: 18px;
+	}
+}
+.progress-span{
+	font-size: 0.65rem;
+}
+
+progress::-moz-progress-bar { background: #4338CA; }
+progress::-webkit-progress-value { background: #4338CA; }
+progress { color: #4338CA; }
+
+.file-name{
+	font-size: 12px;
+	color: black;
+	font-weight: bold;
+}
+.file-size{
+	font-size: 10px;
+	color: #a3a3a3;
+}
+
+.small-text{
+	font-size: 0.6rem;
+
+}
