@@ -180,8 +180,8 @@ function Home() {
                 // });
                 return {
                     success: false,
-                    message:
-                        error ? error :"Upload failed. Please retry or contact us if you believe this is a bug.",
+                    message:error.message
+                        
                 };
             }
         }
