@@ -15,11 +15,15 @@
 	gap: 0px;
 	border-radius: 50%;
 	border: 6px 0px 0px 0px;
-	opacity: 0px;
 	position: absolute;
 	top: -90px;
 }
-
+.halfOpacity{
+	opacity: 0.5;
+}
+.fullOpacity{
+	opacity: 1;
+}
 .content-div-flex {
 	display: flex;
 	justify-content: space-between;
@@ -121,3 +125,31 @@ progress { color: #4338CA; }
 	font-size: 0.6rem;
 
 }
+
+.alert-success{
+	background:  #F0FDF4;
+	margin-top: 0.75rem;
+	padding:0.3rem 0.75rem;
+	font-size: 0.85rem;
+	border-radius: 1rem;
+	color: #15803D;
+	font-weight: 500;
+}
+
+.alert-error{
+	background:  #FEEBEB;
+  margin-top: 0.75rem;
+  padding:0.2rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 1rem;
+  color: #D62828;
+  font-weight: 500;
+}
+
+.title-class{
+	background-color: white;
+	padding: 0.2rem 0.75rem;
+	border-radius: 1rem;
+	box-shadow: 0px 1px 2px 0px #0000000F;
+}
+

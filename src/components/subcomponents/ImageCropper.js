@@ -1,4 +1,4 @@
-import React, { useRef, useState, useCallback, useEffect } from "react";
+import React, { useRef, useState, useCallback, useEffect,memo } from "react";
 import ReactCrop, {
     centerCrop,
     convertToPixelCrop,
@@ -48,6 +48,10 @@ const ASPECT_RATIO = 1;
 const MIN_DIMENSION = 150;
 
 const ImageCropper = ({ selectedImageToCrop, handleModal }) => {
+
+	// console.log("ImageCropper",selectedImageToCrop)
+
+
     const imgRef = useRef(null);
     const previewCanvasRef = useRef(null);
     const [imgSrc, setImgSrc] = useState("");
@@ -55,7 +59,7 @@ const ImageCropper = ({ selectedImageToCrop, handleModal }) => {
     const [error, setError] = useState("");
 
     useEffect(() => {
-        const file = selectedImageToCrop;
+        const file = selectedImageToCrop.file;
         if (!file) return;
 
         const reader = new FileReader();
@@ -142,7 +146,8 @@ const ImageCropper = ({ selectedImageToCrop, handleModal }) => {
                                 handleModal(
                                     true,
                                     "selectedImageToSet",
-                                    dataUrl
+                                    dataUrl,
+																		selectedImageToCrop
                                 );
                             }}
                             buttonText="Confirm"
@@ -165,4 +170,4 @@ const ImageCropper = ({ selectedImageToCrop, handleModal }) => {
     );
 };
 
-export default ImageCropper;
+export default memo(ImageCropper);

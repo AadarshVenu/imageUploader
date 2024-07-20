@@ -16,7 +16,11 @@ function FileInputModal(props) {
         deleteImage,
         selectedImageToCrop,
         switchToCrop,
+				cropImageHandle,
     } = props;
+
+		// console.log("selectedImageToCrop",selectedImageToCrop)
+
 
 
     return (
@@ -24,12 +28,15 @@ function FileInputModal(props) {
             <Modal
                 modalOpen={modalOpen}
                 handleModal={handleModal}
-                title="Upload image(s)"
-                subTitle="You may upload up to 5 images"
+                // title="Upload image(s)"
+                // subTitle="You may upload up to 5 images"
+                title= {selectedImageToCrop ? "Crop Image" : "Upload image(s)"}
+                subTitle= {selectedImageToCrop ? "" : "Upload image(s)"}
+               
             >
                 {switchToCrop ? (
                     <ImageCropper
-                        selectedImageToCrop={selectedImageToCrop}
+												selectedImageToCrop={selectedImageToCrop}
                         handleModal={handleModal}
                     />
                 ) : (
@@ -46,6 +53,7 @@ function FileInputModal(props) {
                                     index={index}
                                     deleteImage={deleteImage}
                                     handleCheckImage={handleCheckImage}
+																		cropImageHandle={cropImageHandle}
                                 />
                             ))}
                         </div>
@@ -58,7 +66,6 @@ function FileInputModal(props) {
                                     onClick={() =>
                                         handleModal(true, "selected")
                                     }
-                                    
                                     disabled={!selectedImageToCrop}
                                 />
                             </div>

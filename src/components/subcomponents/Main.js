@@ -1,10 +1,9 @@
 import React from "react";
-import defaultImage from "../../assets/defaultImage.png";
 import webflow from "../../assets/webflow.png";
 import SecondaryButton from "../../utilities/Buttons/SecondaryButton";
 
 function Main(props) {
-    const { handleModal, cropImage } = props;
+    const { handleModal, cropImage,isLoading } = props;
 
     return (
         <div className="bg-white m-3 rounded-lg shadow-lg max-w-4xl w-full relative">
@@ -13,9 +12,9 @@ function Main(props) {
                 <div className="content-div-flex">
                     <div>
                         <img
-                            src={cropImage || defaultImage}
+                            src={cropImage}
                             alt="Profile"
-                            className="defaultImage"
+														className={`defaultImage ${isLoading ? 'halfOpacity' : 'fullOpacity'}`}	
                         />
                     </div>
                     <div className="ml-4">
