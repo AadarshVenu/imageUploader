@@ -179,9 +179,9 @@ function Home() {
                 //     success: false,
                 // });
                 return {
-                    success: true,
+                    success: false,
                     message:
-                        "Upload failed. Please retry or contact us if you believe this is a bug.",
+                        error ? error :"Upload failed. Please retry or contact us if you believe this is a bug.",
                 };
             }
         }
