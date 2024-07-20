@@ -60,6 +60,11 @@
 .content-div {
 	min-height: auto; 
 }
+@media (max-width: 900px) {
+	.mainDiv{
+		padding: 0 2rem;
+	}
+}
 
 @media (max-width: 768px) {
 	.defaultImage {
@@ -131,7 +136,7 @@ progress { color: #4338CA; }
 	background:  #F0FDF4;
 	margin-top: 0.75rem;
 	padding:0.3rem 0.75rem;
-	font-size: 0.85rem;
+	font-size: 0.75rem;
 	border-radius: 1rem;
 	color: #15803D;
 	font-weight: 500;
@@ -141,7 +146,7 @@ progress { color: #4338CA; }
 	background:  #FEEBEB;
   margin-top: 0.75rem;
   padding:0.2rem 0.75rem;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   border-radius: 1rem;
   color: #D62828;
   font-weight: 500;

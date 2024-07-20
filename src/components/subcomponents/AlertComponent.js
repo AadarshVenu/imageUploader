@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import PropTypes from "prop-types";
 
-function AlertComponent({ alert ,handleAlert}) {
+function AlertComponent({ alert, handleAlert }) {
     const { message, show, success } = alert;
 
     if (!show) return null;
@@ -11,11 +11,17 @@ function AlertComponent({ alert ,handleAlert}) {
             className={`alert ${success ? "alert-success" : "alert-error"}`}
             role="alert"
         >
-            <span className="title-class">
-                {success ? "Success" : "Error"}
-            </span>
-            <span className="ml-2">{message}</span>
-            <span className="ml-2 cursor-pointer" onClick={handleAlert}>x</span>
+            <div className="flex">
+                <span className="title-class flex items-center">
+                    {success ? "Success" : "Error"}
+                </span>
+                <div className="flex">
+                    <span className="ml-2">{message}</span>
+                    <span className="ml-2 cursor-pointer" onClick={handleAlert}>
+                        x
+                    </span>
+                </div>
+            </div>
         </div>
     );
 }

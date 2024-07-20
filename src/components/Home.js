@@ -67,7 +67,7 @@ function Home() {
                 })
             );
 
-            setCropImage(urls[0].imgUrl ? urls[0].imgUrl : defaultImage);
+            setCropImage(urls[0]?.imgUrl ? urls[0].imgUrl : defaultImage);
         } catch (error) {
             console.error("Failed to fetch images:", error);
         }
@@ -180,7 +180,7 @@ function Home() {
                 // });
                 return {
                     success: false,
-                    message:error.message
+                    message:"Upload failed. Please retry or contact us if you believe this is a bug."
                         
                 };
             }
@@ -377,7 +377,7 @@ function Home() {
     };
 
     return (
-        <div className="bg-gradient-to-b from-gray-100 to-gray-400 min-h-screen w-screen overflow-y-auto">
+        <div className="bg-gradient-to-b from-gray-100 to-gray-400 min-h-screen w-screen overflow-y-auto mainDiv">
             <div className="h-[7.5rem] flex flex-col items-center">
                 <AlertComponent alert={alert} handleAlert={handleAlert} />
             </div>
