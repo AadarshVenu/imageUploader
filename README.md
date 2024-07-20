@@ -9,3 +9,6 @@
 ## Folder Structure
 
 The project follows a typical React app structure. Components are in the `src` folder. There are also `assets`,`subcomponents` and `utilities` folders with generic components for buttons, file inputs, and modals, all styled using Tailwind CSS.
+
+**note** 
+Since firebase is a free account, it doesnot allow to upload image with size more than 1 MB
