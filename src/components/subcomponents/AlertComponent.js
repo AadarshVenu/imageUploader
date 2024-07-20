@@ -11,11 +11,11 @@ function AlertComponent({ alert, handleAlert }) {
             className={`alert ${success ? "alert-success" : "alert-error"}`}
             role="alert"
         >
-            <div className="flex">
+            <div className="flex items-center">
                 <span className="title-class flex items-center">
                     {success ? "Success" : "Error"}
                 </span>
-                <div className="flex">
+                <div className="flex items-center">
                     <span className="ml-2">{message}</span>
                     <span className="ml-2 cursor-pointer" onClick={handleAlert}>
                         x
