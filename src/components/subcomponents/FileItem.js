@@ -10,12 +10,12 @@ function FileItem(props) {
         props;
     const { format, url, file, progress, size, showSuccess, checked } = image;
     let imageURL =
-        format === "jpg" || format === "png"
+        format === "jpeg" || format === "png"
             ? url || URL.createObjectURL(file)
             : brockenImage;
     const fileSizeMB = (file?.size / 1024 / 1024).toFixed(2);
     // const isFileSizeValid = fileSizeMB <= 5;
-    const isImageFormatValid = format === "jpg" || format === "png";
+    const isImageFormatValid = format === "jpeg" || format === "png";
     const isFileSizeTooLarge = fileSizeMB > 5;
 
     if (isFileSizeTooLarge) {
@@ -98,7 +98,7 @@ function FileItem(props) {
                     )
                 ) : (
                     <p className="text-red-500 small-text">
-                        {`The file format of ${image?.name} is not supported. Please upload an image in one of the following formats: JPG or PNG.`}
+                        {`The file format of ${image?.name} is not supported. Please upload an image in one of the following formats: jpeg or PNG.`}
                     </p>
                 )}
             </div>

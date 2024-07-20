@@ -67,7 +67,7 @@ function Home() {
                 })
             );
 
-            setCropImage(urls[0].imgUrl);
+            setCropImage(urls[0].imgUrl ? urls[0].imgUrl : defaultImage);
         } catch (error) {
             console.error("Failed to fetch images:", error);
         }
@@ -205,17 +205,19 @@ function Home() {
             checked: false,
             format: file.type.split("/")[1],
             showSuccess: false,
-            uploading: false,
+            uploading: false
         }));
+
+				// console.log("Files to be uploaded: ", newImages);
 
         const supportedImages = [...newImages].filter(
             (img) =>
-                (img.format === "jpg" || img.format === "png") &&
+                (img.format === "jpeg" || img.format === "png") &&
                 (img.file.size / 1024 / 1024).toFixed(2) <= 5
         );
         const nonSupportedImages = [...newImages].filter(
             (img) =>
-                (img.format !== "jpg" && img.format !== "png") ||
+                (img.format !== "jpeg" && img.format !== "png") ||
                 (img.file.size / 1024 / 1024).toFixed(2) > 5
         );
 

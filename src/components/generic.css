@@ -14,9 +14,10 @@
 	height: 160px;
 	gap: 0px;
 	border-radius: 50%;
-	border: 6px 0px 0px 0px;
+	border: 6px solid white;
 	position: absolute;
 	top: -90px;
+
 }
 .halfOpacity{
 	opacity: 0.5;
