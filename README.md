@@ -1,5 +1,5 @@
 
-## Technologies Used
+## Plugin/libraries Used
 
 1. **Tailwind CSS**: For styling, along with regular CSS.
 2. **Google Firebase**: To store images.
